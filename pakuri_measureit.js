@@ -35,7 +35,7 @@ $(window).resize(function (e) {
 });
 $("<span>")
     .attr("id", "chm_ext_pkrmi_pxdisp")
-    .css("display", "noen")
+    .css("display", "none")
     .appendTo($("body"));
 $("<div>")
     .attr("id", "chm_ext_pkrmi_marching_ants_left")
