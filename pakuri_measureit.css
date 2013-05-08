@@ -1,0 +1,78 @@
+﻿#chm_ext_pkrmi_pxdisp {
+    position: absolute;
+    width:100px;
+    height:20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    -webkit-user-select: none;
+    z-index: 10001;
+}
+.chm_ext_marching_ants {
+    position: absolute;
+    pointer-events: none;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    background-image: url(chrome-extension://__MSG_@@extension_id__/images/ant.gif);
+    z-index: 10000;
+}
+#chm_ext_pkrmi_marching_ants_left {
+    background-repeat: repeat-y;
+    background-position: -6px 0;
+    -webkit-animation-name: march-up;
+}
+#chm_ext_pkrmi_marching_ants_right {
+    background-repeat: repeat-y;
+    background-position: -6px 0;
+    -webkit-animation-name: march-down;
+}
+#chm_ext_pkrmi_marching_ants_top {
+    background-repeat: repeat-x;
+    background-position: 0 -6px;
+    -webkit-animation-name: march-right;
+}
+#chm_ext_pkrmi_marching_ants_bottom {
+    background-repeat: repeat-x;
+    background-position: 0 -6px;
+    -webkit-animation-name: march-left;
+}
+#chm_ext_pkrmi_cnv {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+}
+@-webkit-keyframes march-right {
+	from {
+		background-position-x: 0;
+	}
+	to {
+		background-position-x: 8px;
+	}
+}
+@-webkit-keyframes march-left {
+	from {
+		background-position-x: 8px;
+	}
+	to {
+		background-position-x: 0;
+	}
+}
+@-webkit-keyframes march-up {
+	from {
+		background-position-y: 8px;
+	}
+	to {
+		background-position-y: 0;
+	}
+}
+@-webkit-keyframes march-down {
+	from {
+		background-position-y: 0;
+	}
+	to {
+		background-position-y: 8px;
+	}
+}

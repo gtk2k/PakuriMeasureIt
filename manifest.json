@@ -1,0 +1,37 @@
+﻿{
+	"name": "Pakuri MeasureIt",
+	"description": "MeasureItのパクリ(と言えるほどのシロモノではない)",
+	"version": "0.0",
+	"manifest_version": 2,
+	"icons":{
+		"16": "images/16.png",
+		"19": "images/19.png",
+		"32": "images/32.png",
+		"38": "images/38.png",
+		"48": "images/48.png",
+		"64": "images/64.png",
+		"128":"images/128.png"
+	},
+	"browser_action": {
+		"default_icon": { 
+			"19": "images/19.png",
+			"38": "images/38.png"
+		}
+	},
+	"background":{
+		"scripts":["pakuri_measureit_background.js"]
+	},
+	"content_scripts": [{
+		"matches":["http://*/*", "https://*/*"],
+		"js": ["jquery-2.0.0.min.js", "pakuri_measureit.js"],
+		"css":["pakuri_measureit.css"],
+		"run_at": "document_end"
+	}],
+	"permissions": [
+		"tabs",
+		"<all_urls>"
+	],
+	"web_accessible_resources": [ 
+		"images/ant.gif"
+	]
+}
